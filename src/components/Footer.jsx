@@ -23,12 +23,12 @@ const Footer = () => {
           <div className="flex flex-col justify-center items-start gap-4">
             <img src="/icons/webLogo.svg" alt="logo" />
             <p className="para text-grey -tracking-wide max-w-[350px]">
-              Have gift cards you don&apos;t need right away? Convert them into
-              cash by selling them on our platform.
+              Have idle funds? Put your money to work by investing with Wutong —
+              simple, secure, and built for beginners.
             </p>
           </div>
           <p className=" para text-grey1 -tracking-wide max-w-[350px]">
-            Email : wtwtcard@gmail.com
+            Email : wtwutong@gmail.com
           </p>
         </div>
         <div className="flex flex-col justify-center items-start gap-8 ">
@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col md:flex-row items-start gap-4 justify-between md:items-center md:gap-0">
         <p className="para text-black">
-          2024 WTCARD LIMITED. All Rights Reserved.
+          2025 WUTONG LIMITED. All Rights Reserved.
         </p>
         <ul className="flexCenter flex-col md:flex-row gap-2">
           {socials.map(({ src, name, id }) => (

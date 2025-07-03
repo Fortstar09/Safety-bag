@@ -1,47 +1,48 @@
 const FaqData = [
   {
-    question: "What is Wutong",
+    question: "What is Wutong?",
     answer:
-      "Wutong is a platform where you can sell your unused or unwanted gift cards for cash.",
+      "Wutong is a beginner-friendly investment platform where you can buy, sell, and manage assets like stocks and cryptocurrencies with ease.",
   },
   {
-    question: "What type of gift cards can I sell on Wutong?",
+    question: "Do I need experience to start investing on Wutong?",
     answer:
-      "We accept a wide range of gift cards from popular retailers and online stores.",
+      "No, Wutong is designed for beginners. We offer a simple interface and helpful guides to support you every step of the way.",
   },
   {
-    question: "Can I sell a used gift card?",
+    question: "What can I invest in on Wutong?",
     answer:
-      "No, you cannot sell a gift card that has been used, or a loadable by another user.",
+      "You can invest in various assets including stocks, cryptocurrencies, and ETFs. We’re constantly expanding our offerings.",
   },
   {
-    question: "How long does it take to sell on Wutong?",
+    question: "How do I fund my account?",
     answer:
-      "It only takes 10 minutes max to sell your gift cards and get paid ASAP on Wutong.",
+      "You can fund your Wutong account using secure payment methods including bank transfers and cards.",
   },
   {
-    question: "Is it safe to sell my gift cards on Wutong?",
+    question: "How safe is Wutong for investing?",
     answer:
-      "Yes, it is safe to sell your gift cards on Wutong. We prioritize the security of our personal information. ",
+      "Wutong uses advanced encryption and security measures to protect your funds and personal data. Your safety is our priority.",
   },
   {
-    question: "Do I have to pay to sell gift cards on Wutong?",
-    answer: "It is totally free to trade on Wutong.",
+    question: "Are there any fees for trading?",
+    answer:
+      "We keep our fees low and transparent. You’ll always know what you’re paying before you confirm a trade.",
   },
   {
-    question: "Can I cancel a gift card sale on Wutong?",
+    question: "Can I withdraw my money anytime?",
     answer:
-      "Yes, you can cancel a gift card sale on Wutong if you change your mind or if the gift card has been used.",
+      "Yes, you can withdraw your available balance at any time through your preferred payment method.",
   },
   {
-    question: "How do I get paid for selling on Wutong?",
+    question: "What if I make a mistake in a trade?",
     answer:
-      "Once your transaction has been completed, you'll receive payment through your preferred method.",
+      "While trades are final, our support team is here to help resolve any issues or concerns you might have.",
   },
   {
-    question: "Can I buy gift card on Wutong?",
+    question: "Does Wutong offer educational resources?",
     answer:
-      "No not yet, but we are working on it and this feature will soon be available.",
+      "Yes, we provide beginner-friendly tutorials and articles to help you learn the basics of investing and trading.",
   },
 ];
 

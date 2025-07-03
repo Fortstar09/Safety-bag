@@ -7,17 +7,16 @@ const Hero = () => {
       <div className="flexCenter flex-col gap-8 ">
         <div className="flexCenter flex-col gap-4">
           <h2 className="text-[36px] md:text-[64px] max-w-full md:max-w-[50rem] px-3 md:px-0 font-neuemon font-medium hero-head text-center leading-tight tracking-normal">
-            Sell your <span>gift cards</span> at the <span>best rate</span> with
-            <span> ease</span>
+            Make <span>every</span> market <span>move</span> Count!
           </h2>
           <p className="para text-center text-grey px-3 md:px-0 max-w-[34rem]">
-            Have unused gift cards? Easily turn them into cash on our platform.
-            it&apos;s quick and convenient, ensuring no value goes to waste.
+            Start trading in minutes with a secure, user-friendly platform built
+            for profit and speed.
           </p>
         </div>
         <div className="flexCenter gap-4">
-          <Button text="Create account" href='/signUp' grad pad />
-          <Button text="Sign In" href='/signIn' pad />
+          <Button text="Create account" href="/signUp" grad pad />
+          <Button text="Sign In" href="/signIn" pad />
         </div>
       </div>
     </section>

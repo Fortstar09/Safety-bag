@@ -2,24 +2,27 @@ import EachFeatures from "./EachFeatures";
 
 const keyFeatures = [
   {
-    title: "Gift Cards",
+    title: "How It Works – Start Trading in 4 Simple Steps",
     description:
-      "Got unused gift cards? Exchange them for cash with Wutong. Turn your cards into cash instantly in ",
+      "Ready to trade? With Wutong, getting started is fast, easy, and secure. Here’s how it works: ",
     despan: true,
     steps: [
-      { id: "1", name: "Select gift card" },
-      { id: "2", name: "Upload the cards" },
-      { id: "3", name: "Wait for the feedback" },
-      { id: "4", name: "Pay to your wallet" },
+      { id: "1", name: "Create your Account " },
+      { id: "2", name: "Fund your Wallet" },
+      { id: "3", name: "Explore the Markets" },
+      { id: "4", name: "Start Trading & Earning" },
     ],
     images: {
       featureImage: "images/feature_1.png",
       icons: ["icons/time.svg", "icons/time-run.svg"],
     },
-    extraInfo: ["10 mins max load time", "Compensates for time exceeded."],
-    cta: "Explore Selling",
+    extraInfo: [
+      "Trade-ready in minutes",
+      "No experience? No problem — try our demo mode first..",
+    ],
+    cta: "Try Demo",
   },
-  {
+  /* {
     title: "Loans",
     description:
       "Need money urgently? Exchange them for cash with Wutong. Acquire loan assistance in ",
@@ -55,7 +58,7 @@ const keyFeatures = [
     },
     extraInfo: ["Very secure wallet", "Sweet interest on savings"],
     cta: "Start Saving",
-  },
+  }, */
   {
     title: "Refer and Earn",
     description:
@@ -81,12 +84,12 @@ const Features = () => {
     <section className="py-14 md:pt-[140px] md:pb-20" id="company">
       <div className=" flexCenter flex-col slideIn gap-4">
         <h2 className="text-center text-black head28 max-w-[700px] ">
-          Our features are aim to enhance your experience and deliver maximum
-          convenience.
+          Our features are designed to guide you every step of the way, helping
+          you build confidence as you grow your portfolio.
         </h2>
         <p className="para text-center text-grey max-w-[555px] ">
-          Wutong goes beyond gift card selling, offering more services like
-          loans and savings. Unlock a wealth of possibilities with us.
+          Whether you&apos;re just starting out or exploring new opportunities,
+          Wutong makes your investment journey easier than ever.
         </p>
       </div>
       {keyFeatures.map((feature) => (

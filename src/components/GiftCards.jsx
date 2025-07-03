@@ -17,7 +17,7 @@ const GiftCards = () => {
       <div className="px-5 lg:px-12 xl:px-36 my-14 flex flex-col gap-8">
         <div className="flexCenter w-full gap-3">
           <h1 className="text-3xl para text-grey w-fit">
-            Featured<span className="pl-1">giftcards</span>
+            Featured<span className="pl-1">assets</span>
           </h1>
           <div className="h-[1px] w-full bg-line " />
         </div>

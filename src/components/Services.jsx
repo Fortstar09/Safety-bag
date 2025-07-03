@@ -2,26 +2,28 @@ import Button from "./Button";
 
 const eachServe = [
   {
-    name: "Variety of cards",
-    src: "/icons/creditcard.svg",
-    description:
-      "We accept giftcards from different locations all over the world.",
-  },
-  {
-    name: "Best Gift Card Rates",
-    src: "/icons/chart.svg",
-    description: "We offer unbeatable market rates for your gift cards.",
-  },
-  {
-    name: "Safe and Reliable",
-    src: "/icons/lock-on.svg",
-    description: "Your assets are safe and we put you first.",
-  },
-  {
-    name: "Instant Payment",
+    name: "Instart Trade Execution",
     src: "/icons/bolt.svg",
     description:
-      "Our transactions are lightning-fast when it comes to payments.",
+      "Never miss a market move with ultra-fast trade execution powered by real-time data.",
+  },
+  {
+    name: "Demo & Live Accounts",
+    src: "/icons/chart.svg",
+    description:
+      "Practice risk-free on a demo account or go live and earn real profits anytime.",
+  },
+  {
+    name: "Secure Transactions",
+    src: "/icons/lock-on.svg",
+    description:
+      "Your data and funds are protected with bank-level encryption and two-factor authentication.",
+  },
+  {
+    name: "Easy Deposits & Withdrawals",
+    src: "/icons/creditcard.svg",
+    description:
+      "Fund your account or withdraw profits quickly via cards, bank transfer, or crypto — with zero hidden fees",
   },
 ];
 
@@ -31,15 +33,17 @@ const Services = () => {
       <div className="flexCenter flex-col slideIn gap-8">
         <div className="flexCenter flex-col text-center gap-4 ">
           <h2 className=" text-black head28 max-w-[700px]">
-            Our exchange process is
-            <span className="text-green"> seamless and hassle-free.</span>
+            Seamless Asset Exchange,
+            <span className="text-green"> Maximum Value.</span>
           </h2>
           <p className="para max-w-[500px] text-grey">
-            Say goodbye to the hassle of dealing with unwanted cards—we provide
-            a convenient solution that maximizes the value of your assets.
+            Experience stress-free trading with our smooth and intuitive
+            exchange process. We eliminate the hassle of managing unwanted
+            assets, offering a fast, secure, and rewarding way to unlock their
+            full potential.
           </p>
         </div>
-        <Button text="Get Started" pad />
+        <Button text="Get Started" href="/signIn" pad />
       </div>
       <div className="flex flex-col gap-8 md:flex-row md:gap-0 justify-between items-center">
         {eachServe.map(({ name, src, description }) => (
