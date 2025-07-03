@@ -8,7 +8,7 @@ const Button = ({ text,href, grad, pad, className }) => {
         pad ? "px-6 py-3" : "px-4 py-2"
       } ${
         grad &&
-        "bg-gradient-to-r from-[#099235] to-[#7FC026]  text-white border-0"
+        "bg-linear-to-r from-green to-[#7FC026]  text-white border-0"
       } ${className} `}
     >
       {text}

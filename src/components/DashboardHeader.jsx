@@ -13,11 +13,11 @@ const DashboardHeader = () => {
                 <p className="text-base font-bold text-grey1">10,000.00 <span className="font-normal">USD</span></p>
           </div>
           <div className="flexCenter gap-5">
-            <div className="cursor-pointer p-3 hover:border-lightBlack/20 hover:border rounded-[5px]">
+            <div className="cursor-pointer p-3 hover:border-light-black/20 hover:border rounded-[5px]">
               <Settings size={24} />
             </div>
 
-            <div className="cursor-pointer p-3 hover:border-lightBlack/20 hover:border rounded-[5px]">
+            <div className="cursor-pointer p-3 hover:border-light-black/20 hover:border rounded-[5px]">
               <UserRound size={24} />
             </div>
           </div>

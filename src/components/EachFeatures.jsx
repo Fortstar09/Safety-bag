@@ -45,7 +45,7 @@ const EachFeatures = ({
             <ul className="py-4 flex flex-col gap-2">
               {steps.map(({ id, name }) => (
                 <li className="para text-grey" key={id}>
-                  <span className="text-lightBlack bg-line text w-5 h-5 inline-flex justify-center items-center rounded-full mr-2">
+                  <span className="text-light-black bg-line text w-5 h-5 inline-flex justify-center items-center rounded-full mr-2">
                     {id}
                   </span>
                   {name}

@@ -16,7 +16,7 @@ const BlurIn = ({ word, className, variant, duration = 1 }) => {
       animate="visible"
       transition={{ duration }}
       variants={combinedVariants}
-      className={cn("drop-shadow-sm", className)}
+      className={cn("drop-shadow-xs", className)}
     >
       {word}
     </motion.h1>

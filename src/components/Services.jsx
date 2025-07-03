@@ -66,7 +66,7 @@ const EachService = ({ name, src, description }) => {
   return (
     <div className="flex fadeUp flex-col justify-center text-center items-center gap-[7px]">
       <img src={src} alt="bolt" />
-      <h3 className=" text-black para18 mb-[1px]">{name}</h3>
+      <h3 className=" text-black para18 mb-px">{name}</h3>
       <p className="para text-grey max-w-64">{description}</p>
     </div>
   );

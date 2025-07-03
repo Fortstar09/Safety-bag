@@ -19,7 +19,7 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={src}
-                  className="text-lightBlack font-monasan font-normal text-base tracking-tight"
+                  className="text-light-black font-monasan font-normal text-base tracking-tight"
                 >
                   {name}
                 </a>

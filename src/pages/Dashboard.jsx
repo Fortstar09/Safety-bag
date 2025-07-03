@@ -15,7 +15,7 @@ const Dashboard = () => {
       <TradingViewWidget />
       <RightSideBar />
       </div>
-      <div className="w-full h-8 bg-lightBlack"></div>
+      <div className="w-full h-8 bg-light-black"></div>
       </section>
     </main>
     </>

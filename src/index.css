@@ -1,6 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin 'tailwindcss-animate';
+@plugin 'tailwindcss-motion';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --background-image-hero-pattern: url('images/hero-pattern.png');
+
+  --font-neuemon: neue;
+  --font-monasan: monaSan;
+
+  --color-black: #021d0b;
+  --color-border: #d1d2d2;
+  --color-grey: #66686a;
+  --color-light-black: #8c8d8f;
+  --color-line: #efefef;
+  --color-green: #099235;
+  --color-grey1: #404244;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes gradient {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility input {
+  @apply px-[15px] py-[11px] text-[12px] max-w-[400px] rounded-[8px] text-white/85 bg-[#3f3f3f] focus:outline-hidden focus:border-none focus:ring-0  placeholder:text-white/55;
+}
+
+@utility para {
+  @apply font-monasan font-normal text-base tracking-tight;
+}
+
+@utility para18 {
+  @apply font-neuemon font-medium text-[18px] leading-[24.3px];
+}
+
+@utility head28 {
+  @apply font-neuemon font-medium text-4xl md:text-5xl tracking-[-1%] md:leading-[57.6px];
+}
+
+@utility navanimate {
+  @apply motion-opacity-in-[0%] motion-blur-in-[10px] motion-duration-[1.50s] motion-duration-[0.78s]/opacity motion-delay-[0.20s]/opacity motion-duration-[1.26s]/blur motion-delay-[0.60s]/blur;
+}
+
+@utility divanimate {
+  @apply motion-scale-in-[0.2] motion-translate-x-in-[7%] motion-translate-y-in-[8%] motion-opacity-in-[0%] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-duration-[1.88s]/scale motion-duration-[1.36s]/translate motion-delay-[0.28s]/translate motion-duration-[1.00s]/opacity motion-duration-[1.22s]/rotate motion-delay-[0.56s]/rotate motion-duration-[0.90s]/blur motion-delay-[0.92s]/blur;
+}
+
+@utility flexCenter {
+  @apply flex justify-center items-center;
+}
 
 @layer base {
   @font-face {
@@ -66,128 +160,100 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.hero-head {
-  background: linear-gradient(90deg, #099235 0%, #7fc026 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 500;
-}
-
-.hero-head span {
-  font-style: italic;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
-}
-
-.statbox {
-  background: url("/images/dotted-pattern.png");
-}
-
-.show {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-.fadeUp {
-  animation: fadeUp linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-.slideIn {
-  animation: slideIn linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: translateX(-400px)
-  }
-
-  80% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0px)
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  60% {
-    opacity: 0;
-    filter: blur(10px);
-  }
-
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0px)
-  }
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(500px)
-  }
-
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px)
-  }
-}
-
 @layer utilities {
-  .input{
-    @apply px-[15px] py-[11px] text-[12px] max-w-[400px] rounded-[8px] text-white/85 bg-[#3f3f3f] focus:outline-none focus:border-none focus:ring-0  placeholder:text-white/55;
-  }
-  .para {
-    @apply font-monasan font-normal text-base tracking-tight;
-  }
-
-  .para18 {
-    @apply font-neuemon font-medium text-[18px] leading-[24.3px];
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
   }
 
-
-  .head28 {
-    @apply font-neuemon font-medium text-4xl md:text-5xl tracking-[-1%] md:leading-[57.6px];
+  html {
+    scroll-behavior: smooth;
   }
 
-  .navanimate {
-    @apply motion-opacity-in-[0%] motion-blur-in-[10px] motion-duration-[1.50s] motion-duration-[0.78s]/opacity motion-delay-[0.20s]/opacity motion-duration-[1.26s]/blur motion-delay-[0.60s]/blur;
+  .hero-head {
+    background: linear-gradient(90deg, #099235 0%, #7fc026 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 500;
   }
 
-  .divanimate {
-    @apply motion-scale-in-[0.2] motion-translate-x-in-[7%] motion-translate-y-in-[8%] motion-opacity-in-[0%] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-duration-[1.88s]/scale motion-duration-[1.36s]/translate motion-delay-[0.28s]/translate motion-duration-[1.00s]/opacity motion-duration-[1.22s]/rotate motion-delay-[0.56s]/rotate motion-duration-[0.90s]/blur motion-delay-[0.92s]/blur;
+  .hero-head span {
+    font-style: italic;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
   }
 
-  .flexCenter {
-    @apply flex justify-center items-center;
+  .statbox {
+    background: url('/images/dotted-pattern.png');
+  }
+
+  .show {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .fadeUp {
+    animation: fadeUp linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .slideIn {
+    animation: slideIn linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateX(-400px);
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    60% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(500px);
+    }
+
+    60% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 }

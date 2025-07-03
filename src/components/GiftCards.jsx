@@ -19,7 +19,7 @@ const GiftCards = () => {
           <h1 className="text-3xl para text-grey w-fit">
             Featured<span className="pl-1">assets</span>
           </h1>
-          <div className="h-[1px] w-full bg-line " />
+          <div className="h-px w-full bg-line " />
         </div>
         <div className="flex justify-between items-center ">
           {Icons.map(({ name, src }) => (

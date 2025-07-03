@@ -33,7 +33,7 @@ const Stats = () => {
     <section className="px-5 lg:px-12 xl:px-36 mt-20 mb-10 flex flex-col justify-center gap-[140px] items-center">
       <h2 className=" w-full md:max-w-[700px] head28 text-center slideIn text-black">
         Our users trust us because we have some “doings”
-        <span className="text-lightBlack">- yunno</span>
+        <span className="text-light-black">- yunno</span>
         😉
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 lg:gap-y-[100px]">
@@ -58,7 +58,7 @@ export default Stats;
 const StatsBox = ({ num, title, numColor, desc, grad }) => {
   return (
     <div
-      className={`bg-gradient-to-t ${grad[0]} ${grad[1]} rounded-2xl slideIn border border-line`}
+      className={`bg-linear-to-t ${grad[0]} ${grad[1]} rounded-2xl slideIn border border-line`}
     >
       <div className="flexCenter flex-col statbox gap-[30px] px-5 md:px-10 py-14 md:py-20">
         <div className="gap-2 flexCenter flex-col ">

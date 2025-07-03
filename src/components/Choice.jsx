@@ -35,7 +35,7 @@ const Choice = () => {
       <div className="flexCenter flex-col text-center gap-4">
         <h2 className="max-w-[899px] text-center head28 text-black">
           Which do you prefer
-          <span className="text-lightBlack"> - Wutong right? </span>
+          <span className="text-light-black"> - Wutong right? </span>
           🤨
         </h2>
         <p className="para max-w-[356px] text-grey">
