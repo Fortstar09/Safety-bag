@@ -51,7 +51,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/mine"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <Pickaxe />
@@ -60,7 +60,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/copy"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <CopyCheck />
@@ -69,7 +69,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/hold"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <Wallet />
@@ -78,7 +78,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/account"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <CircleUserRound />

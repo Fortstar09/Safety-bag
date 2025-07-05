@@ -1,0 +1,58 @@
+import DashboardLayout from "@/components/DashboardLayout";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+
+const Mining = () => {
+  return (
+    <DashboardLayout className="bg-white">
+      <div className="flex flex-col justify-center items-center py-12.5 px-10">
+        <div className="w-full flex justify-center gap-20">
+          <div className="w-full ">
+            <Card className="py-22.5 bg-[#15973F33]">
+              <h2 className="uppercase text-xl text-center font-medium mt-6">
+                Mining Balance
+              </h2>
+              <h1 className="text-4xl text-[#000000] text-center font-bold">
+                $0.00
+              </h1>
+            </Card>
+            <div className="mt-10 flex justify-center items-center w-full gap-5">
+              <Button className="py-5 shrink font-medium w-full text-xl bg-green rounded-[5px] hover:bg-green-700">
+                Plans
+              </Button>
+              <Button className="py-5 shrink font-medium w-full text-xl bg-green rounded-[5px] hover:bg-green-700">
+                Withdrawals
+              </Button>
+            </div>
+            <Card className="w-[580px] h-[250px] mt-[60px] text-3xl font-bold flex justify-center items-center">Tradview BTC CHART</Card>
+          </div>
+          <div className="w-full flex flex-col gap-5">
+            <List />
+            <List />
+            <List />
+            <List />
+          </div>
+        </div>
+      </div>
+    </DashboardLayout>
+  );
+};
+
+export default Mining;
+
+const List = () => {
+  return (
+    <Card className="flex flex-row justify-between items-center px-5 py-6">
+      <div className="flex justify-between items-center gap-3.5">
+        <img src="/icons/amazon.svg" alt="icon" width={50} height={50} />
+        <div className="inline-flex flex-col">
+          <p className="text-base font-medium">$0.00</p>
+          <p className="text-base font-light">0.000000000 BTC</p>
+        </div>
+      </div>
+      <h3>
+        0 <span>TH/s</span>
+      </h3>
+    </Card>
+  );
+};

@@ -7,6 +7,10 @@ import Withdraw from './pages/Withdraw';
 import Deposit from './pages/Deposit';
 import Trading from './pages/Main';
 import Pricing from './pages/Pricing';
+import Mining from './pages/Mining';
+import CopyTrade from './pages/CopyTrade';
+import Holding from './pages/Holding';
+import Account from './pages/Account';
 
 const App = () => {
   return (
@@ -27,6 +31,11 @@ const App = () => {
         <Route path="/deposit" element={<Deposit />} />
         <Route path="/withdraw" element={<Withdraw />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/mine" element={<Mining />} />
+        <Route path="/copy" element={<CopyTrade />} />
+        <Route path="/hold" element={<Holding />} />
+        <Route path="/account" element={<Account />} />
+
 
       {/* </Route> */}
 
