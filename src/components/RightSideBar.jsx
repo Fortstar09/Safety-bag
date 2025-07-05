@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const RightSideBar = () => {
   return (
-    <aside className=" font-mono border-l-1 border-grey bg-white h-full px-2 py-4">
+    <aside className=" font-mono border-l-1 border-grey bg-white h-dvh px-2 py-4">
       <div className="flex flex-col items-center w-full h-full gap-4 px-5 py-4.5">
         <DropOption />
         <div className="mt-5 w-full">

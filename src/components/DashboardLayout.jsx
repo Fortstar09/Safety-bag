@@ -7,9 +7,9 @@ const DashboardLayout = ({children, className}) => {
     <>
       <main className="flex flex-col w-full h-screen items-center justify-start">
         <DashboardHeader />
-        <section className="w-full  border-b-0 h-full flex">
+        <section className="w-full border-b-0 h-full flex">
           <LeftSideBar />
-          <div className={`w-full h-full flex border-b-4 border-line ${className}`}>
+          <div className={`mt-15 ml-[200px] w-full h-full ${className}`}>
           {children}
           </div>
         </section>
