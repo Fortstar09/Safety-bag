@@ -1,27 +1,32 @@
 import { Settings, UserRound } from "lucide-react";
-import Button from "./Button";
+import { Button } from "./ui/button";
 
 const DashboardHeader = () => {
   return (
-    <nav className="px-5  py-2 w-full bg-white">
+    <nav className="px-5  py-2 w-full border-b-1 bg-white">
       <div className="flex justify-between">
         <img src="/icons/webLogo.svg" alt="logo" />
 
-        <div className="flexCenter gap-8">
+        <div className="flexCenter gap-32">
           <div className="flex flex-col">
-                <p className="text-sm text-green font-bold ">DEMO <span className="text-grey font-normal">#203938463</span></p>
-                <p className="text-base font-bold text-grey1">10,000.00 <span className="font-normal">USD</span></p>
+            <p className="text-sm text-green font-bold ">
+              DEMO <span className="text-grey font-normal">#203938463</span>
+            </p>
+            <p className="text-base font-bold text-grey1">
+              10,000.00 <span className="font-normal">USD</span>
+            </p>
           </div>
-          <div className="flexCenter gap-5">
-            <div className="cursor-pointer p-3 hover:border-light-black/20 hover:border rounded-[5px]">
-              <Settings size={24} />
-            </div>
+          <div className="flexCenter gap-6">
+            <Settings size={24} color="#024E1A" />
 
-            <div className="cursor-pointer p-3 hover:border-light-black/20 hover:border rounded-[5px]">
-              <UserRound size={24} />
-            </div>
+            <UserRound size={24} color="#024E1A" />
+            <Button
+              variant="outline"
+              className=" font-semibold text-base cursor-pointer rounded-[8px] py-2.5 px-5 ml-2.5"
+            >
+              Deposit
+            </Button>
           </div>
-          <Button text="Deposit" href="/signIn" pad />
         </div>
       </div>
     </nav>

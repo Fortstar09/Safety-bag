@@ -3,7 +3,7 @@ import "./index.css";
 import Home from './pages/Home';
 import AuthPage from './pages/AuthPage';
 import NotFound from './pages/NotFound';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Main';
 
 const App = () => {
   return (
