@@ -11,11 +11,11 @@ import {
 
 const LeftSideBar = () => {
   return (
-    <div className="bg-white w-[200px]  flex h-full flex-col items-center justify-start">
+    <div className="bg-white w-[250px] border-r border-line  flex h-full flex-col items-center justify-start">
       <ul className="w-full h-full flex flex-col gap-0 items-start justify-start pt-5">
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/trading"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <ChartCandlestick />
@@ -24,7 +24,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/deposit"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <Landmark /> 
@@ -33,7 +33,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/withdraw"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <HandCoins />
@@ -42,7 +42,7 @@ const LeftSideBar = () => {
         </li>
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a
-            href="/dashboard"
+            href="/pricing"
             className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
           >
             <NotepadText />

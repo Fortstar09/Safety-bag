@@ -17,9 +17,9 @@ const DashboardHeader = () => {
             </p>
           </div>
           <div className="flexCenter gap-6">
-            <Settings size={24} color="#024E1A" />
+            <Settings size={18} color="#024E1A" className="cursor-pointer" />
 
-            <UserRound size={24} color="#024E1A" />
+            <UserRound size={18} color="#024E1A" className="cursor-pointer" />
             <Button
               variant="outline"
               className=" font-semibold text-base cursor-pointer rounded-[8px] py-2.5 px-5 ml-2.5"

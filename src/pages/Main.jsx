@@ -1,24 +1,14 @@
-// import LiveChart from "@/components/LiveChart";
-import DashboardHeader from "@/components/DashboardHeader";
-import LeftSideBar from "@/components/LeftSideBar";
+import DashboardLayout from "@/components/DashboardLayout";
 import RightSideBar from "@/components/RightSideBar";
 import TradingViewWidget from "@/components/TradingViewWidget";
 
-const Dashboard = () => {
+const Trading = () => {
   return (
-    <>
-      <main className="flex flex-col w-full h-screen items-center justify-start">
-        <DashboardHeader />
-        <section className="w-full  border-b-0 h-full flex">
-          <LeftSideBar />
-          <div className="w-full h-full flex items-center border-b-4 border-line  justify-start ">
-            <TradingViewWidget />
-            <RightSideBar />
-          </div>
-        </section>
-      </main>
-    </>
+    <DashboardLayout className="bg-[#1E1E1E]">
+      <TradingViewWidget />
+      <RightSideBar />
+    </DashboardLayout>
   );
 };
 
-export default Dashboard;
+export default Trading;

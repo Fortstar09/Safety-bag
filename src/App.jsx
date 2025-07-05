@@ -3,7 +3,10 @@ import "./index.css";
 import Home from './pages/Home';
 import AuthPage from './pages/AuthPage';
 import NotFound from './pages/NotFound';
-import Dashboard from './pages/Main';
+import Withdraw from './pages/Withdraw';
+import Deposit from './pages/Deposit';
+import Trading from './pages/Main';
+import Pricing from './pages/Pricing';
 
 const App = () => {
   return (
@@ -20,8 +23,11 @@ const App = () => {
         <Route path="/signUp" element={<AuthPage type='signUp' />} />
 
         {/* <Route element={<ProtectedRoute isAllowed={!!currentUser} />}> */}
-        <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/profile" element={<Profile />} /> */}
+        <Route path="/trading" element={<Trading />} />
+        <Route path="/deposit" element={<Deposit />} />
+        <Route path="/withdraw" element={<Withdraw />} />
+        <Route path="/pricing" element={<Pricing />} />
+
       {/* </Route> */}
 
         {/* <Route path="/users" element={<Users />} /> */}
