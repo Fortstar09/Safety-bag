@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import ListCard from "@/components/ListCard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -27,10 +28,10 @@ const Mining = () => {
             <Card className="w-[580px] h-[250px] mt-[60px] text-3xl font-bold flex justify-center items-center">Tradview BTC CHART</Card>
           </div>
           <div className="w-full flex flex-col gap-5">
-            <List />
-            <List />
-            <List />
-            <List />
+            <ListCard />
+            <ListCard />
+            <ListCard />
+            <ListCard />
           </div>
         </div>
       </div>
@@ -39,20 +40,3 @@ const Mining = () => {
 };
 
 export default Mining;
-
-const List = () => {
-  return (
-    <Card className="flex flex-row justify-between items-center px-5 py-6">
-      <div className="flex justify-between items-center gap-3.5">
-        <img src="/icons/amazon.svg" alt="icon" width={50} height={50} />
-        <div className="inline-flex flex-col">
-          <p className="text-base font-medium">$0.00</p>
-          <p className="text-base font-light">0.000000000 BTC</p>
-        </div>
-      </div>
-      <h3>
-        0 <span>TH/s</span>
-      </h3>
-    </Card>
-  );
-};
