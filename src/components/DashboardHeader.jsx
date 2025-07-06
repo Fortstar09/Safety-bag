@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const DashboardHeader = () => {
   return (
-    <nav className="px-5 fixed py-2 w-full border-b-1 bg-white">
+    <nav className="px-5 fixed py-3 w-full border-b-1 bg-white">
       <div className="flex justify-between">
         <img src="/icons/webLogo.svg" alt="logo" />
 
