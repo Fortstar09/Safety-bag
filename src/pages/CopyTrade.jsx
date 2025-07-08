@@ -17,7 +17,6 @@ const CopyTrade = () => {
         <CopyTradeCard />
         <CopyTradeCard />
         <CopyTradeCard />
-
       </div>
     </DashboardLayout>
   );
