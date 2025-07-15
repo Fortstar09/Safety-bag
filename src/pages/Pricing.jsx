@@ -7,7 +7,7 @@ import { CircleCheck } from "lucide-react";
 const Pricing = () => {
   return (
     <DashboardLayout className="">
-      <div className="bg-white w-full py-7 px-7.5 flex flex-col justify-center items-center gap-20">
+      <div className="bg-white w-full py-7 px-8 flex flex-col justify-center items-center gap-20">
         <h1 className="text-4xl font-bold text-center">Pricing</h1>
         <div className='w-full'>
           <h2 className="text-xl text-center font-semibold mb-6">Trading</h2>

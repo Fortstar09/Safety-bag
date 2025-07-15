@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 const CopyTrade = () => {
   return (
     <DashboardLayout className="bg-white">
-      <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 px-10 py-24.5">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 px-5 md:px-8 py-10 md:py-[100px]">
         <CopyTradeCard />
         <CopyTradeCard />
         <CopyTradeCard />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Action = () => {
   return (
     <section
-      className="px-5 lg:px-12 xl:px-36 py-14 md:py-[140px] flex flex-col gap-20 bg-linear-to-r from-green to-[#7FC026]"
+      className="px-5 lg:px-12 xl:px-36 py-14 md:py-[140px] flex flex-col gap-20 bg-gradient-to-r from-[#099235] to-[#7FC026]"
       id="support"
     >
       <div className="flexCenter flex-col slideIn gap-8">

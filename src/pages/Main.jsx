@@ -4,7 +4,7 @@ import TradingViewWidget from "@/components/TradingViewWidget";
 
 const Trading = () => {
   return (
-    <DashboardLayout className="bg-[#1E1E1E] flex items-center justify-start ">
+    <DashboardLayout className="bg-[#1E1E1E] flex flex-col md:flex-row items-center justify-start ">
       <TradingViewWidget />
       <RightSideBar />
     </DashboardLayout>

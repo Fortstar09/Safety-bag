@@ -20,7 +20,7 @@ export default Account;
 
 const Profile = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-0 px-10 pt-20 pb-14 ">
+    <div className="w-full flex flex-col items-center justify-center gap-0 px-10 py-10 md:pt-20 pb-14 ">
       <div className="relative mb-3 z-0!">
         <img src="/images/user_2.svg" alt="user" className="size-[150px]" />
         <span className="bg-green absolute bottom-0 right-0 size-10 rounded-full flex justify-center items-center cursor-pointer">
@@ -47,14 +47,14 @@ const EditProfile = () => {
           value="account"
           className=" flex flex-col gap-5 max-w-[640px]"
         >
-          <div className="flex flex-col gap-6  p-10">
+          <div className="flex flex-col gap-6 p-5 md:p-10">
             <VerifyCard img="email.svg" title="Email Verification" completed />
             <VerifyCard img="man.svg" title="Identity Verification" />
             <VerifyCard img="map.svg" title="Address Verification" />
           </div>
         </TabsContent>
         <TabsContent value="update" className="flex flex-col gap-5 w-full">
-          <div className=" w-full grid grid-cols-2 gap-6 p-10">
+          <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-6 p-5 md:p-10">
             <div className="flex flex-col gap-6">
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-street">Street</Label>
@@ -120,7 +120,7 @@ const EditProfile = () => {
           value="password"
           className="flex flex-col gap-5 max-w-[540px]"
         >
-          <div className="flex flex-col gap-6 p-10">
+          <div className="flex flex-col gap-6 p-5 md:p-10">
             <div className="grid gap-3">
               <Label htmlFor="tabs-demo-current">Current password</Label>
               <Input
@@ -173,7 +173,7 @@ const CustomTabsTrigger = ({ title, value }) => {
   return (
     <TabsTrigger
       value={value}
-      className=" text-base cursor-pointer border-b-3 pb-2 data-[state=active]:text-black data-[state=active]:border-green data-[state=active]:bg-transparent data-[state=active]:shadow-none "
+      className="text-sm md:text-base cursor-pointer border-b-[3px] pb-2 data-[state=active]:text-black data-[state=active]:border-green data-[state=active]:bg-transparent data-[state=active]:shadow-none "
     >
       {title}
     </TabsTrigger>

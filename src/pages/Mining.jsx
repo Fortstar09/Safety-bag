@@ -6,10 +6,10 @@ import { Card } from "@/components/ui/card";
 const Mining = () => {
   return (
     <DashboardLayout className="bg-white">
-      <div className="flex flex-col justify-center items-center py-12.5 px-10">
-        <div className="w-full flex justify-center gap-20">
+      <div className="flex flex-col justify-center items-center py-6 md:py-12 px-5 md:px-10">
+        <div className="w-full flex justify-center flex-col md:flex-row gap-20">
           <div className="w-full ">
-            <Card className="py-22.5 bg-[#15973F33]">
+            <Card className="py-10 md:py-[90px] bg-[#15973F33]">
               <h2 className="uppercase text-xl text-center font-medium mt-6">
                 Mining Balance
               </h2>
@@ -25,7 +25,7 @@ const Mining = () => {
                 Withdrawals
               </Button>
             </div>
-            <Card className="w-[580px] h-[250px] mt-[60px] text-3xl font-bold flex justify-center items-center">Tradview BTC CHART</Card>
+            <Card className="hidden w-[580px] h-[250px] mt-[60px] text-3xl font-bold md:flex justify-center items-center">Tradview BTC CHART</Card>
           </div>
           <div className="w-full flex flex-col gap-5">
             <ListCard />

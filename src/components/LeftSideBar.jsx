@@ -11,7 +11,7 @@ import {
 
 const LeftSideBar = () => {
   return (
-    <div className="bg-white w-[210px] fixed top-[69px] border-r border-line  flex h-full flex-col items-center justify-start">
+    <div className="bg-white w-[210px] fixed top-[69px] border-r border-line hidden  md:flex h-full flex-col items-center justify-start">
       <ul className="w-full h-full flex flex-col gap-0 items-start justify-start pt-5">
         <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
           <a

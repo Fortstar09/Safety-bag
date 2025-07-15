@@ -30,7 +30,7 @@ function TradingViewWidget() {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start">
+    <div className="w-full min-h-dvh flex flex-col items-center justify-start">
       <div
         className="tradingview-widget-container"
         ref={container}

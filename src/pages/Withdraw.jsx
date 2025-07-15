@@ -4,7 +4,7 @@ import DashboardLayout from "@/components/DashboardLayout";
 const Withdraw = () => {
   return (
 <DashboardLayout>
-      <div className="bg-white w-full py-10 px-7.5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="bg-white w-full py-10 px-5 md:px-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <CustomCard />
         <CustomCard />
         <CustomCard />

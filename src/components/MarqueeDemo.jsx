@@ -84,7 +84,7 @@ const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard = ({ name, body, img, tier }) => {
   return (
-    <div className="flex flex-col justify-between cursor-pointer p-3 md:p-6 gap-2 items-start border border-border rounded-xl">
+    <div className="flex flex-col justify-between cursor-pointer p-3 md:p-6 gap-2 items-start border border-border rounded-xl ml-5">
       <p className="h-fit md:h-[120px] w-[221px] md:w-[421px] text-sm md:para text-grey">
         &quot;{body}&quot;
       </p>
@@ -101,7 +101,7 @@ const ReviewCard = ({ name, body, img, tier }) => {
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[500px] w-full flex-col items-center gap-5 justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:30s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />
@@ -112,8 +112,8 @@ export function MarqueeDemo() {
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-0 md:w-1/3 bg-linear-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-0 md:w-1/3 bg-linear-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-0 md:w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-0 md:w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
     </div>
   );
 }

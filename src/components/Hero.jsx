@@ -6,10 +6,10 @@ const Hero = () => {
       {/* <Meteors number={30} /> */}
       <div className="flexCenter flex-col gap-8 ">
         <div className="flexCenter flex-col gap-4">
-          <h2 className="text-[36px] md:text-[64px] max-w-full md:max-w-200 px-3 md:px-0 font-neuemon font-medium hero-head text-center leading-tight tracking-normal">
+          <h2 className="text-[36px] md:text-[64px] max-w-full md:max-w-[50rem] px-3 md:px-0 font-neuemon font-medium hero-head text-center leading-tight tracking-normal">
             Make <span>every</span> market <span>move</span> Count!
           </h2>
-          <p className="para text-center text-grey px-3 md:px-0 max-w-136">
+          <p className="para text-center text-grey px-3 md:px-0 max-w-[34rem]">
             Start trading in minutes with a secure, user-friendly platform built
             for profit and speed.
           </p>
