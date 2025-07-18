@@ -25,7 +25,7 @@ const DashboardHeader = () => {
       <div className="flex justify-between">
         <div className="flexCenter gap-2">
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger open>
               <Menu size={20} className="md:hidden" />
             </SheetTrigger>
             <SheetContent className="w-[250px] sm:w-[540px] px-0" side="left">

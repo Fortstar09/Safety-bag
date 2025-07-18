@@ -30,7 +30,7 @@ function TradingViewWidget() {
   }, []);
 
   return (
-    <div className="w-full min-h-dvh flex flex-col items-center justify-start">
+    <div className="w-full flex flex-col items-start justify-start" style={{ minHeight: "calc(100dvh - 20%)", height: '91dvh' }}>
       <div
         className="tradingview-widget-container"
         ref={container}
@@ -40,10 +40,10 @@ function TradingViewWidget() {
           className="tradingview-widget-container__widget"
           style={{ height: "calc(100% - 32px)", width: "100%" }}
         ></div>
-        {/* <div className=" w-full h-20 flex items-center justify-center bg-[#1E1E1E] text-white font-semibold"> */}
-
-        {/* </div> */}
       </div>
+      {/* <div className="w-full h-40 bg-white">
+
+      </div> */}
     </div>
   );
 }
