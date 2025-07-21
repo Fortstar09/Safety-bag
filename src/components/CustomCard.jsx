@@ -1,17 +1,18 @@
+/* eslint-disable react/prop-types */
 import { Card } from "./ui/card";
 
-const CustomCard = () => {
+const CustomCard = ({title, img}) => {
   return (
     <Card className="px-4 md:px-9 py-5 md:py-10 gap-3">
       <div className="flex items-center md:items-start md:flex-col gap-4">
         <img
-          src="/icons/bank-fill.svg"
+          src={img}
           alt="bank-icon"
           className="size-10 md:size-12"
         />
         <div className="flex flex-col gap-4">
           <h2 className="text-base md:text-xl font-semibold">
-            Online Bank Transfer
+           {title}
           </h2>
           <ul className="hidden md:flex md:flex-col">
             <li>Processing Time: Instant - 45mins</li>
