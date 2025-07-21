@@ -28,10 +28,11 @@ const Mining = () => {
             <Card className="hidden w-[580px] h-[250px] mt-[60px] text-3xl font-bold md:flex justify-center items-center">Tradview BTC CHART</Card>
           </div>
           <div className="w-full flex flex-col gap-5">
-            <ListCard />
-            <ListCard />
-            <ListCard />
-            <ListCard />
+            <ListCard img='Bitcoin' unit='BTC' />
+            <ListCard img='Dogecoin' unit='DOGE' />
+            <ListCard img='Ethereum' unit='ETC' />
+            <ListCard img='Tron' unit='TRN' />
+            <ListCard img='Litecoin' unit='LTC' />
           </div>
         </div>
       </div>
