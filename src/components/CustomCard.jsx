@@ -3,15 +3,15 @@ import { Card } from "./ui/card";
 
 const CustomCard = ({ title, img, children }) => {
   return (
-    <Card className="relative overflow-hidden px-6 py-6 md:py-10 gap-4 w-full max-w-[300px] md:max-w-[500px] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green/50 bg-white">
+    <Card className="relative overflow-hidden p-6 gap-4 w-full max-w-[300px] md:max-w-[500px] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green/50 bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-green/5 via-transparent to-transparent rounded-2xl pointer-events-none" />
 
-      <div className="flex items-start flex-col gap-5 relative z-10">
+      <div className="flex items-start flex-col gap-3 relative z-10">
         <div className="bg-green/10 p-3 rounded-xl flex items-center justify-center">
           <img src={img} alt="bank-icon" className="size-10 md:size-12 object-contain" />
         </div>
 
-        <div className="flex flex-col gap-3 w-full">
+        <div className="flex flex-col gap-2 w-full">
           <h2 className="text-base md:text-lg font-semibold text-gray-800">{title}</h2>
 
           {/* Desktop info */}

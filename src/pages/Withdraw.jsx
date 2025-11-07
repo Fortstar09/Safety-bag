@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DashboardLayout from "@/components/DashboardLayout";
 import CustomCard from "@/components/CustomCard";
+import { toast } from "sonner";
 
 const PENDING_TO_PROCESS_MS = 4000;
 const PROCESSING_TO_COMPLETE_MS = 10000;
@@ -13,7 +14,7 @@ const Withdraw = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalStep, setModalStep] = useState(1);
   const [amount, setAmount] = useState("");
-  const [coin, setCoin] = useState("USDC");
+  const [coin, setCoin] = useState("USDT");
   const [address, setAddress] = useState("");
   const [balance, setBalance] = useState(2500);
   const [withdrawals, setWithdrawals] = useState([]);
@@ -153,12 +154,12 @@ const Withdraw = () => {
     const dynamicMax = Math.min(MAX_WITHDRAWAL, balance);
 
     if (amt < dynamicMin) {
-      alert(`Minimum withdrawal is ${dynamicMin} USDC`);
+      alert(`Minimum withdrawal is ${dynamicMin} USDT`);
       return;
     }
     if (amt > dynamicMax) {
       alert(
-        `Maximum withdrawal is ${dynamicMax} USDC (or your current balance)`
+        `Maximum withdrawal is ${dynamicMax} USDT (or your current balance)`
       );
       return;
     }
@@ -190,7 +191,7 @@ const Withdraw = () => {
     setModalStep(1);
     setAmount("");
     setAddress("");
-    setCoin("USDC");
+    setCoin("USDT");
   };
 
   const closeModal = () => {
@@ -198,7 +199,7 @@ const Withdraw = () => {
     setModalStep(1);
     setAmount("");
     setAddress("");
-    setCoin("USDC");
+    setCoin("USDT");
   };
 
   const formatTime = (ts) => {
@@ -216,11 +217,11 @@ const Withdraw = () => {
       return;
     }
     if (amt < dynamicMin) {
-      alert(`Minimum withdrawal is ${dynamicMin} USDC`);
+      alert(`Minimum withdrawal is ${dynamicMin} USDT`);
       return;
     }
     if (amt > dynamicMax) {
-      alert(`Maximum withdrawal is ${dynamicMax} USDC`);
+      alert(`Maximum withdrawal is ${dynamicMax} USDT`);
       return;
     }
     if (!address || address.length < 8) {
@@ -240,24 +241,84 @@ const Withdraw = () => {
 
   return (
     <DashboardLayout>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-dvh bg-white">
         <div className="bg-white w-full py-10 px-5 md:px-7">
           <h1 className="text-2xl font-bold mb-6">Withdraw</h1>
-          <div className="bg-white w-full py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <CustomCard title="Deposit with crypto" img="/icons/bank-fill.svg">
+          <div className="bg-white w-full py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <CustomCard title="Withdraw to wallet" img="/icons/bank-fill.svg">
               <p className="text-gray-600 text-sm">
                 Limit:{" "}
                 <span className="font-medium text-gray-800">
-                  20 - 12,000 USDC
+                  20 - 12,000 USDT
                 </span>
               </p>
               <p className="text-gray-600 mt-2 text-sm">
                 Balance:{" "}
-                <span className="font-semibold">{balance.toFixed(2)} USDC</span>
+                <span className="font-semibold">{balance.toFixed(2)} USDT</span>
               </p>
               <button
                 onClick={openModal}
-                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[4px] hover:bg-green/70 font-semibold"
+                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              >
+                Deposit
+              </button>
+            </CustomCard>
+            <CustomCard title="Paypal" img="/icons/paypal.svg">
+              <p className="text-gray-600 text-sm">
+                Limit:{" "}
+                <span className="font-medium text-gray-800">
+                  50 - 5,000 USDT
+                </span>
+              </p>
+              <p className="text-gray-600 mt-2 text-sm opacity-0">
+                Balance:{" "}
+                <span className="font-semibold">{balance.toFixed(2)} USDT</span>
+              </p>
+              <button
+                  onClick={()=> {
+                  toast.error("Service unavailable right now, kindly try Withdraw to wallet")
+                }}
+                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              >
+                Deposit
+              </button>
+            </CustomCard>
+            <CustomCard title="Online Bank Transfer" img="/icons/bankTransfer.svg">
+              <p className="text-gray-600 text-sm">
+                Limit:{" "}
+                <span className="font-medium text-gray-800">
+                  5 - 10,000 USDT
+                </span>
+              </p>
+              <p className="text-gray-600 mt-2 text-sm opacity-0">
+                Balance:{" "}
+                <span className="font-semibold">{balance.toFixed(2)} USDT</span>
+              </p>
+              <button
+                  onClick={()=> {
+                  toast.error("Service unavailable right now, kindly try Withdraw to wallet")
+                }}
+                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              >
+                Deposit
+              </button>
+            </CustomCard>
+            <CustomCard title="Withdraw as bitcoin" img="/icons/bitconIcon.svg">
+              <p className="text-gray-600 text-sm">
+                Limit:{" "}
+                <span className="font-medium text-gray-800">
+                  10 - 20,000 USDT
+                </span>
+              </p>
+              <p className="text-gray-600 mt-2 text-sm opacity-0">
+                Balance:{" "}
+                <span className="font-semibold">{balance.toFixed(2)} USDT</span>
+              </p>
+              <button
+                onClick={()=> {
+                  toast.error("Service unavailable right now, kindly try Withdraw to wallet")
+                }}
+                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
               >
                 Deposit
               </button>
@@ -387,7 +448,7 @@ const Withdraw = () => {
                 {modalStep === 1 && (
                   <div className="flex flex-col gap-4">
                     <label className="text-sm">
-                      <span className="font-medium">Amount (USDC)</span>
+                      <span className="font-medium">Amount (USDT)</span>
                       <input
                         type="number"
                         step="0.000001"
@@ -405,10 +466,10 @@ const Withdraw = () => {
                         onChange={(e) => setCoin(e.target.value)}
                         className="block w-full mt-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
                       >
-                        <option value="USDC">USDC</option>
                         <option value="USDT">USDT</option>
+                        {/* <option value="USDT">USDC</option>
                         <option value="BTC">BTC</option>
-                        <option value="ETH">ETH</option>
+                        <option value="ETH">ETH</option> */}
                       </select>
                     </label>
 
@@ -567,7 +628,7 @@ const Withdraw = () => {
           )}
         </AnimatePresence>
       </div>
-    </DashboardLayout >
+    </DashboardLayout>
   );
 };
 

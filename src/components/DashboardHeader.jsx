@@ -110,7 +110,7 @@ const DashboardHeader = () => {
               DEMO <span className="text-grey font-normal">#203938463</span>
             </p>
             <p className="text-sm font-bold text-grey1">
-              {balance.toFixed(2)} <span className="font-normal">USDC</span>
+              {balance.toFixed(2)} <span className="font-normal">USDT</span>
             </p>
           </div>
 
