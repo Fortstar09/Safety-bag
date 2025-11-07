@@ -1,5 +1,4 @@
 import {
-  ChartCandlestick,
   CircleUserRound,
   CopyCheck,
   HandCoins,
@@ -23,11 +22,11 @@ const MobileNav = () => {
           <ul className="w-full h-full flex flex-col gap-0 items-start justify-start pt-5">
             <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
               <a
-                href="/trading"
+                href="/pricing"
                 className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
               >
-                <ChartCandlestick />
-                <span>Trading</span>
+                <NotepadText />
+                <span>Plans</span>
               </a>
             </li>
             <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
@@ -46,15 +45,6 @@ const MobileNav = () => {
               >
                 <HandCoins />
                 <span>Withdrawals</span>
-              </a>
-            </li>
-            <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">
-              <a
-                href="/pricing"
-                className="text-base font-medium text-grey1  flex items-center gap-2 py-4 px-5 rounded-md transition-colors duration-200"
-              >
-                <NotepadText />
-                <span>Plans</span>
               </a>
             </li>
             <li className="hover:bg-[#15973F33] w-full rounded-md mb-2">

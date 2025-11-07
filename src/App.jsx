@@ -5,7 +5,7 @@ import AuthPage from './pages/AuthPage';
 import NotFound from './pages/NotFound';
 import Withdraw from './pages/Withdraw';
 import Deposit from './pages/Deposit';
-import Trading from './pages/Main';
+// import Trading from './pages/Main';
 import Pricing from './pages/Pricing';
 import Mining from './pages/Mining';
 import CopyTrade from './pages/CopyTrade';
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/signUp" element={<AuthPage type='signUp' />} />
 
         {/* <Route element={<ProtectedRoute isAllowed={!!currentUser} />}> */}
-        <Route path="/trading" element={<Trading />} />
+        {/* <Route path="/trading" element={<Trading />} /> */}
         <Route path="/deposit" element={<Deposit />} />
         <Route path="/withdraw" element={<Withdraw />} />
         <Route path="/pricing" element={<Pricing />} />
