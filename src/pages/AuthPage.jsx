@@ -121,7 +121,7 @@ const AuthPage = ({ type }) => {
                   />
                 </div>
               )}
-              <Link to='/mine' className="w-full">
+              <Link to='/pricing' className="w-full">
                 <button
                   type="submit"
                   className="bg-green text-white w-full md:px-[15px] py-2 md:py-[11px] text-base rounded-[10px] font-monasan font-medium"
