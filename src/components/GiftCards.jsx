@@ -3,7 +3,7 @@ const Icons = [
   { name: "netflix", src: "/icons/netflix.svg" },
   { name: "apple", src: "/icons/apple.svg" },
   { name: "visa", src: "/icons/visa.svg" },
-  { name: "google", src: "/icons/google.svg" },
+  { name: "google", src: "/icons/Google.svg" },
   { name: "virus", src: "/icons/virus.svg" },
   { name: "stream", src: "/icons/stream.svg" },
   { name: "playstation", src: "/icons/playstation.svg" },
@@ -13,10 +13,10 @@ const Icons = [
 
 const GiftCards = () => {
   return (
-    <section>
+    <section className="bg-white dark:bg-bgDark2">
       <div className="px-5 lg:px-12 xl:px-36 my-14 flex flex-col gap-8">
         <div className="flexCenter w-full gap-3">
-          <h1 className="text-3xl para text-grey w-fit">
+          <h1 className="text-3xl para text-grey dark:text-gray-300 w-fit">
             Featured<span className="pl-1">assets</span>
           </h1>
           <div className="h-px w-full bg-line " />

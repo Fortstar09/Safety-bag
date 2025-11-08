@@ -163,6 +163,9 @@ html {
 }
 
 @layer utilities {
+  body{
+    @apply font-monasan;
+  }
   .input{
     @apply px-[15px] py-[11px] text-[12px] max-w-[400px] rounded-[8px] text-white/85 bg-[#3f3f3f] focus:outline-none focus:border-none focus:ring-0  placeholder:text-white/55;
   }

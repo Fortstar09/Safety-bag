@@ -55,7 +55,7 @@ const reviews = [
   },
   {
     name: "Albert Flores",
-    body: "The cashback offer is really great here... I receive more money than I expected... Thanks wutong.",
+    body: "The cashback offer is really great here... I receive more money than I expected... Thanks safebox.",
     img: "images/user_5.svg",
     tier: "icons/v3.svg",
   },
@@ -85,12 +85,12 @@ const secondRow = reviews.slice(reviews.length / 2);
 const ReviewCard = ({ name, body, img, tier }) => {
   return (
     <div className="flex flex-col justify-between cursor-pointer p-3 md:p-6 gap-2 items-start border border-border rounded-xl ml-5">
-      <p className="h-fit md:h-[120px] w-[221px] md:w-[421px] text-sm md:para text-grey">
+      <p className="h-fit md:h-[120px] w-[221px] md:w-[421px] text-sm md:para text-grey dark:text-gray-300">
         &quot;{body}&quot;
       </p>
       <div className="flex justify-center items-center gap-2">
         <img src={img} alt="" />
-        <p className=" text-base font-neuemon font-medium md:para18 text-grey1 leading-6">
+        <p className=" text-base font-neuemon font-medium md:para18 text-grey1 dark:text-gray-300/80  leading-6">
           {name}
         </p>
         <img src={tier} alt="" />
@@ -112,8 +112,8 @@ export function MarqueeDemo() {
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-0 md:w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-0 md:w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-0 md:w-1/3 bg-gradient-to-r from-white dark:from-bgDark2"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-0 md:w-1/3 bg-gradient-to-l from-white dark:from-bgDark2"></div>
     </div>
   );
 }

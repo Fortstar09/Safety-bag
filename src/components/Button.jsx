@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Button = ({ text,href, grad, pad, className }) => {
   return (
     <Link to={href}
-      className={`text-base tracking-tight cursor-pointer font-monasan font-medium border rounded-[10px] border-border text-black ${
+      className={`text-base tracking-tight cursor-pointer font-monasan font-medium border rounded-[8px] border-border text-black dark:text-textWhite1 ${
         pad ? "px-6 py-3" : "px-4 py-2"
       } ${
         grad &&

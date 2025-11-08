@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const AuthPage = ({ type }) => {
   return (
-    <main className="bg-hero-pattern font-neuemon">
+    <main className="bg-hero-pattern font-neuemon bg-white dark:bg-bgDark2">
       <section className=" min-h-dvh w-full flexCenter p-3">
-        <div className="bg-[#000000]/90 text-white flexCenter gap-32 px-6 py-10 lg:p-3 rounded-[10px] md:rounded-[20px]">
+        <div className="bg-[#000000]/90 border border-line/60 text-white flexCenter gap-32 px-6 py-10 lg:p-3 rounded-[10px] md:rounded-[20px]">
           <div className="w-[420px] hidden lg:block">
             {type === "signIn" ? (
               <img
@@ -124,7 +124,7 @@ const AuthPage = ({ type }) => {
               <Link to='/pricing' className="w-full">
                 <button
                   type="submit"
-                  className="bg-green text-white w-full md:px-[15px] py-2 md:py-[11px] text-base rounded-[10px] font-monasan font-medium"
+                  className="bg-brand text-white w-full md:px-[15px] py-2 md:py-[11px] text-base rounded-[10px] font-monasan font-medium"
                 >
                   {type === "signIn" ? "Sign in" : "Create account"}
                 </button>
@@ -134,11 +134,11 @@ const AuthPage = ({ type }) => {
             <p className="text-xs md:text-sm  text-white/50 max-w-[450px]">
               Don&apos;t have an account?
               {type === "signIn" ? (
-                <Link to="/signUp" className="text-green px-2 font-medium">
+                <Link to="/signUp" className="text-brand px-2 font-medium">
                   sign up
                 </Link>
               ) : (
-                <Link to="/signIn" className="text-green  px-2 font-medium">
+                <Link to="/signIn" className="text-brand  px-2 font-medium">
                   sign in
                 </Link>
               )}

@@ -3,7 +3,7 @@ const statsData = [
     num: "3K+",
     title: "Registered Investors",
     numColor: "black",
-    desc: "new investors building wealth with Wutong",
+    desc: "new investors building wealth with Safebox",
     gradient: ["from-[#CEE9D7]", "to-[#FEFEFE]"],
   },
   {
@@ -16,7 +16,7 @@ const statsData = [
   {
     num: "97%",
     title: "User Satisfaction Rate",
-    numColor: "green",
+    numColor: "brand",
     desc: "our platform makes investing simple and stress-free",
     gradient: ["from-[#E2E4EB]", "to-[#FEFEFE]"],
   },
@@ -30,13 +30,13 @@ const statsData = [
 ];
 const Stats = () => {
   return (
-    <section className="px-5 lg:px-12 xl:px-36 mt-20 mb-10 flex flex-col justify-center gap-[140px] items-center">
-      <h2 className=" w-full md:max-w-[700px] head28 text-center slideIn text-black">
+    <section className="px-5 lg:px-12 xl:px-36 my-20 flex flex-col justify-center gap-[140px] items-center" id="stats">
+      <h2 className=" w-full md:max-w-[700px] head28 text-center slideIn text-black dark:text-textWhite1">
         Our users trust us because we have some “doings”
         <span className="text-lightBlack">- yunno</span>
         😉
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 lg:gap-y-[100px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 lg:gap-y-[60px]">
         {statsData.map((data) => (
           <StatsBox
             key={data.num}
@@ -58,7 +58,7 @@ export default Stats;
 const StatsBox = ({ num, title, numColor, desc, grad }) => {
   return (
     <div
-      className={`bg-gradient-to-t ${grad[0]} ${grad[1]} rounded-2xl slideIn border border-line`}
+      className={`bg-gradient-to-t ${grad[0]} ${grad[1]} rounded-2xl slideIn border border-line dark:border-line/70`}
     >
       <div className="flexCenter flex-col statbox gap-[30px] px-5 md:px-10 py-14 md:py-20">
         <div className="gap-2 flexCenter flex-col ">

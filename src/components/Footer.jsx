@@ -1,11 +1,11 @@
 import Button from "./Button";
 
 const footerLink = [
-  { src: "#products", name: "Products", id: 1 },
-  { src: "#company", name: "Company", id: 2 },
-  { src: "#blog", name: "Blog", id: 3 },
+  { src: "#", name: "Home", id: 1 },
+  { src: "#company", name: "Features", id: 2 },
+  { src: "#stats", name: "Stats", id: 3 },
   { src: "#faq", name: "FAQs", id: 4 },
-  { src: "#support", name: "Support", id: 5 },
+  { src: "#review", name: "Review", id: 5 },
 ];
 
 const socials = [
@@ -21,20 +21,26 @@ const Footer = () => {
       <div className="flex flex-col gap-10 md:flex-row md:gap-0 justify-between items-start">
         <div className="flex flex-col justify-center items-start gap-8 ">
           <div className="flex flex-col justify-center items-start gap-4">
-            <img src="/icons/webLogo.svg" alt="logo" />
-            <p className="para text-grey -tracking-wide max-w-[350px]">
-              Have idle funds? Put your money to work by investing with Wutong —
-              simple, secure, and built for beginners.
+            <a
+              href="/"
+              className="flex justify-center gap-4 items-center"
+            >
+              <img src="/icons/logo.svg" alt="logo" className=" size-6 " />
+              <span className="text-lg font-semibold text-[#333] dark:text-white">SafeBox</span>
+            </a>
+            <p className="para text-grey dark:text-gray-300 -tracking-wide max-w-[350px]">
+              Have idle funds? Put your money to work by investing with SafeBox
+              — simple, secure, and built for beginners.
             </p>
           </div>
-          <p className=" para text-grey1 -tracking-wide max-w-[350px]">
-            Email : wtwutong@gmail.com
+          <p className=" para text-grey1 dark:text-gray-300 -tracking-wide max-w-[350px]">
+            Email : safebox@gmail.com
           </p>
         </div>
         <div className="flex flex-col justify-center items-start gap-8 ">
           <ul className="flex items-start justify-center flex-col md:items-center md:flex-row gap-2 md:gap-10">
             {footerLink.map(({ src, name, id }) => (
-              <li key={id} className="text-black para cursor-pointer">
+              <li key={id} className="text-black dark:text-textWhite1 para cursor-pointer">
                 <a href={src}>{name}</a>
               </li>
             ))}
@@ -45,7 +51,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="Email Address"
-                className="py-4 px-4 w-[300px] text-[14px] text-grey border border-border rounded-[10px] focus:outline-hidden focus:border-green  focus:ring-green"
+                className="py-4 px-4 w-[300px] text-[14px] text-grey border border-border rounded-[10px] focus:outline-hidden focus:border-brand  focus:ring-brand"
               />
               <Button
                 text="Submit"
@@ -57,8 +63,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-start gap-4 justify-between md:items-center md:gap-0">
-        <p className="para text-black">
-          2025 WUTONG LIMITED. All Rights Reserved.
+        <p className="para text-black dark:text-grey">
+          2025 SAFEBOX LIMITED. All Rights Reserved.
         </p>
         <ul className="flexCenter flex-col md:flex-row gap-2">
           {socials.map(({ src, name, id }) => (

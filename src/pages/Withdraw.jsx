@@ -234,43 +234,43 @@ const Withdraw = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-gray-600">Loading...</div>
+        <div className="text-gray-600 dark:text-textWhite2/70">Loading...</div>
       </div>
     );
   }
 
   return (
     <DashboardLayout>
-      <div className="min-h-dvh bg-white">
-        <div className="bg-white w-full py-10 px-5 md:px-7">
-          <h1 className="text-2xl font-bold mb-6">Withdraw</h1>
-          <div className="bg-white w-full py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="min-h-dvh bg-white dark:bg-bgDark2 ">
+        <div className="bg-white dark:bg-bgDark2  w-full py-10 px-5 md:px-7">
+          <h1 className="text-2xl font-bold mb-6 dark:text-textWhite1">Withdraw</h1>
+          <div className="bg-white dark:bg-bgDark2  w-full py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <CustomCard title="Withdraw to wallet" img="/icons/bank-fill.svg">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
                 Limit:{" "}
-                <span className="font-medium text-gray-800">
+                <span className="font-medium text-gray-800 dark:text-slate-200/80">
                   20 - 12,000 USDT
                 </span>
               </p>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-600 dark:text-textWhite2/70 mt-2 text-sm">
                 Balance:{" "}
                 <span className="font-semibold">{balance.toFixed(2)} USDT</span>
               </p>
               <button
                 onClick={openModal}
-                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+                className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
               >
                 Deposit
               </button>
             </CustomCard>
             <CustomCard title="Paypal" img="/icons/paypal.svg">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
                 Limit:{" "}
-                <span className="font-medium text-gray-800">
+                <span className="font-medium text-gray-800 dark:text-slate-200/80">
                   50 - 5,000 USDT
                 </span>
               </p>
-              <p className="text-gray-600 mt-2 text-sm opacity-0">
+              <p className="text-gray-600 dark:text-textWhite2/70 mt-2 text-sm opacity-0">
                 Balance:{" "}
                 <span className="font-semibold">{balance.toFixed(2)} USDT</span>
               </p>
@@ -278,19 +278,19 @@ const Withdraw = () => {
                   onClick={()=> {
                   toast.error("Service unavailable right now, kindly try Withdraw to wallet")
                 }}
-                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+                className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
               >
                 Deposit
               </button>
             </CustomCard>
             <CustomCard title="Online Bank Transfer" img="/icons/bankTransfer.svg">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
                 Limit:{" "}
-                <span className="font-medium text-gray-800">
+                <span className="font-medium text-gray-800 dark:text-slate-200/80">
                   5 - 10,000 USDT
                 </span>
               </p>
-              <p className="text-gray-600 mt-2 text-sm opacity-0">
+              <p className="text-gray-600 dark:text-textWhite2/70 mt-2 text-sm opacity-0">
                 Balance:{" "}
                 <span className="font-semibold">{balance.toFixed(2)} USDT</span>
               </p>
@@ -298,19 +298,19 @@ const Withdraw = () => {
                   onClick={()=> {
                   toast.error("Service unavailable right now, kindly try Withdraw to wallet")
                 }}
-                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+                className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
               >
                 Deposit
               </button>
             </CustomCard>
             <CustomCard title="Withdraw as bitcoin" img="/icons/bitconIcon.svg">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
                 Limit:{" "}
-                <span className="font-medium text-gray-800">
+                <span className="font-medium text-gray-800 dark:text-slate-200/80">
                   10 - 20,000 USDT
                 </span>
               </p>
-              <p className="text-gray-600 mt-2 text-sm opacity-0">
+              <p className="text-gray-600 dark:text-textWhite2/70 mt-2 text-sm opacity-0">
                 Balance:{" "}
                 <span className="font-semibold">{balance.toFixed(2)} USDT</span>
               </p>
@@ -318,22 +318,22 @@ const Withdraw = () => {
                 onClick={()=> {
                   toast.error("Service unavailable right now, kindly try Withdraw to wallet")
                 }}
-                className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+                className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
               >
                 Deposit
               </button>
             </CustomCard>
           </div>
 
-          <div className="bg-white border border-gray-100 rounded-lg shadow-sm overflow-hidden mt-12">
-            <div className="p-4 border-b border-gray-100">
-              <h2 className="text-lg font-semibold">Recent Withdrawals</h2>
+          <div className="bg-white dark:bg-bgDark1 border border-gray-100 dark:border-white/20 rounded-lg shadow-sm overflow-hidden mt-12">
+            <div className="p-4 border-b border-gray-100 dark:bg-bgDark1">
+              <h2 className="text-lg font-semibold text-textWhite1">Recent Withdrawals</h2>
             </div>
 
             <div className="overflow-x-auto">
               <table className="min-w-full text-left">
                 <thead>
-                  <tr className="text-xs text-gray-500 uppercase bg-gray-50">
+                  <tr className="text-xs text-gray-500  uppercase bg-gray-50 dark:bg-bgDark1">
                     <th className="px-4 py-3">ID</th>
                     <th className="px-4 py-3">Amount</th>
                     <th className="px-4 py-3">Coin</th>
@@ -347,7 +347,7 @@ const Withdraw = () => {
                     <tr>
                       <td
                         colSpan={6}
-                        className="px-4 py-6 text-center text-gray-500"
+                        className="px-4 py-6 text-center text-gray-500 dark:text-textWhite2/80"
                       >
                         No withdrawals yet
                       </td>
@@ -360,14 +360,14 @@ const Withdraw = () => {
                       initial={{ opacity: 0, y: 6 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.18 }}
-                      className="border-t hover:bg-gray-50"
+                      className="border-t hover:bg-gray-50 dark:bg-bgDark1/50"
                     >
-                      <td className="px-4 py-3 text-sm font-mono">{tx.id}</td>
-                      <td className="px-4 py-3 text-sm font-medium">
+                      <td className="px-4 py-3 text-sm font-mono dark:text-textWhite2/80">{tx.id}</td>
+                      <td className="px-4 py-3 text-sm font-medium dark:text-textWhite2/80">
                         {tx.amount} {tx.coin}
                       </td>
-                      <td className="px-4 py-3 text-sm">{tx.coin}</td>
-                      <td className="px-4 py-3 text-sm break-all max-w-[240px] font-mono">
+                      <td className="px-4 py-3 text-sm dark:text-textWhite2/80">{tx.coin}</td>
+                      <td className="px-4 py-3 text-sm break-all max-w-[240px] font-mono dark:text-textWhite2/80">
                         {tx.address}
                       </td>
                       <td className="px-4 py-3">
@@ -388,7 +388,7 @@ const Withdraw = () => {
                           </span>
                         )}
                       </td>
-                      <td className="px-4 py-3 text-xs text-gray-500">
+                      <td className="px-4 py-3 text-xs text-gray-500 dark:text-textWhite2/80">
                         {formatTime(tx.createdAt)}
                       </td>
                     </motion.tr>
@@ -492,7 +492,7 @@ const Withdraw = () => {
                       </button>
                       <button
                         onClick={handleStep1Submit}
-                        className="px-4 py-2 bg-green-600 text-white rounded font-semibold bg-green hover:bg-green/60"
+                        className="px-4 py-2 text-white rounded font-semibold bg-brand hover:bg-brand/60"
                       >
                         Preview
                       </button>
@@ -505,20 +505,20 @@ const Withdraw = () => {
                     <h4 className="font-semibold">Preview Withdrawal</h4>
                     <div className="grid gap-3 text-sm bg-gray-50 p-4 rounded-lg">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Amount</span>
+                        <span className="text-gray-600 dark:text-textWhite2/70">Amount</span>
                         <span className="font-medium">
                           {parseFloat(amount).toFixed(6)} {coin}
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Estimated Fee</span>
+                        <span className="text-gray-600 dark:text-textWhite2/70">Estimated Fee</span>
                         <span className="font-medium text-red-600">
                           -{computeFeeAndReceive(parseFloat(amount)).fee} {coin}
                         </span>
                       </div>
                       <div className="h-px bg-gray-200" />
                       <div className="flex justify-between">
-                        <span className="text-gray-600">
+                        <span className="text-gray-600 dark:text-textWhite2/70">
                           You&apos;ll receive
                         </span>
                         <span className="font-bold text-green-600">
@@ -527,7 +527,7 @@ const Withdraw = () => {
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Destination</span>
+                        <span className="text-gray-600 dark:text-textWhite2/70">Destination</span>
                         <span className="break-all max-w-[240px] font-mono text-xs">
                           {address}
                         </span>
@@ -543,7 +543,7 @@ const Withdraw = () => {
                       </button>
                       <button
                         onClick={submitWithdrawal}
-                        className="px-4 py-2 bg-green-600 text-white rounded font-semibold bg-green hover:bg-green/60"
+                        className="px-4 py-2 bg-brand text-white rounded font-semibold hover:bg-brand/60"
                       >
                         Confirm & Queue
                       </button>
@@ -560,7 +560,7 @@ const Withdraw = () => {
                       <h4 className="font-semibold text-lg mb-2">
                         Withdrawal Queued!
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-textWhite2/70">
                         Your withdrawal has been added to the queue and will be
                         processed shortly.
                       </p>
@@ -648,7 +648,7 @@ function StepDot({ label, active, done }) {
       >
         {done ? "✓" : label.split(".")[0]}
       </div>
-      <div className="text-xs text-gray-600 hidden sm:block">
+      <div className="text-xs text-gray-600 dark:text-textWhite2/70 hidden sm:block">
         {label.split(".")[1]}
       </div>
     </div>

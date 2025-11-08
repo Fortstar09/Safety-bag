@@ -32,11 +32,11 @@ const Services = () => {
     <section className="px-5 lg:px-12 xl:px-36 py-14 md:pt-[140px] md:pb-20 flex flex-col gap-20">
       <div className="flexCenter flex-col slideIn gap-8">
         <div className="flexCenter flex-col text-center gap-4 ">
-          <h2 className=" text-black head28 max-w-[700px]">
+          <h2 className=" text-black dark:text-textWhite2 head28 max-w-[700px]">
             Seamless Asset Exchange,
-            <span className="text-green"> Maximum Value.</span>
+            <span className="text-brand"> Maximum Value.</span>
           </h2>
-          <p className="para max-w-[500px] text-grey">
+          <p className="para max-w-[500px] text-grey dark:text-gray-300">
             Experience stress-free trading with our smooth and intuitive
             exchange process. We eliminate the hassle of managing unwanted
             assets, offering a fast, secure, and rewarding way to unlock their
@@ -66,8 +66,8 @@ const EachService = ({ name, src, description }) => {
   return (
     <div className="flex fadeUp flex-col justify-center text-center items-center gap-[7px]">
       <img src={src} alt="bolt" />
-      <h3 className=" text-black para18 mb-px">{name}</h3>
-      <p className="para text-grey max-w-64">{description}</p>
+      <h3 className=" text-black dark:text-textWhite2 para18 mb-px">{name}</h3>
+      <p className="para text-grey dark:text-gray-300/70 max-w-64">{description}</p>
     </div>
   );
 };

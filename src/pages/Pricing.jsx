@@ -2,6 +2,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import DashboardLayout from "@/components/DashboardLayout";
+import { toast } from "sonner";
 
 const plans = [
   {
@@ -100,7 +101,7 @@ const plans = [
       "Real-time Alerts",
       "Basic Analytics",
     ],
-    color: "from-green/80 to-green/50",
+    color: "from-brand/80 to-brand/50",
   },
   {
     title: "Copy Expert",
@@ -177,9 +178,9 @@ const plans = [
 const Pricing = () => {
   return (
     <DashboardLayout>
-      <div className="min-h-dvh bg-white">
-        <div className="bg-white w-full py-10 px-5 md:px-7">
-          <h1 className="text-2xl font-bold mb-16">
+      <div className="min-h-dvh bg-white dark:bg-bgDark2">
+        <div className="bg-white dark:bg-bgDark2 w-full py-10 px-5 md:px-7">
+          <h1 className="text-2xl font-bold dark:text-textWhite1 mb-16">
             Invest & Grow Your Crypto Portfolio
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10 w-full">
@@ -215,7 +216,7 @@ const InvestmentCard = ({
   const maxTotalReturn = (maxPrice + parseFloat(maxProfitAmount)).toFixed(2);
 
   return (
-    <Card className="overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300 border border-[#efefef]  gap-0 hover:border-green/50 py-0 ">
+    <Card className="overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300 border border-[#efefef] dark:border-white/20 dark:hover:border-brand dark:bg-white/10  gap-0 hover:border-brand/50 py-0 ">
       {/* Colored Header */}
       <div className={`bg-gradient-to-r ${color} p-4 text-white`}>
         <div className="text-xs font-semibold uppercase tracking-wide opacity-90 mb-1">
@@ -223,14 +224,14 @@ const InvestmentCard = ({
         </div>
         <h2 className="text-xl font-bold">{title}</h2>
       </div>
-      <div className="p-6 flex flex-col flex-1 items-center text-center">
+      <div className="px-6 py-4 flex flex-col flex-1 items-center text-center">
         <div className="w-full mb-4">
-          <h3 className="text-3xl font-bold text-green mb-1">${priceRange}</h3>
-          <div className="text-xs text-gray-500">Investment Range</div>
+          <h3 className="text-3xl font-bold text-brand mb-1">${priceRange}</h3>
+          <div className="text-xs text-gray-500 dark:text-textWhite1">Investment Range</div>
         </div>
 
         {/* ROI Display */}
-        <div className="bg-green-50 rounded-lg p-3 mb-4 border border-green-100 w-full">
+        <div className="bg-green-50 rounded-[8px] p-3 mb-4 border border-green-100 w-full">
           <div className="flex justify-between items-center mb-2">
             <span className="text-xs text-gray-600">Expected ROI</span>
             <span className="text-lg font-bold text-green-700">+{profit}%</span>
@@ -249,14 +250,14 @@ const InvestmentCard = ({
           </div>
         </div>
 
-        <p className="text-xs text-gray-500 mb-4">
+        <p className="text-xs text-gray-500 dark:text-textWhite2 mb-4">
           <span className="font-medium">Duration:</span> {duration}
         </p>
 
         <div className="border-t border-gray-100 pt-4 mb-4 w-full">
-          <ul className="w-full flex flex-col gap-2 text-left text-sm text-gray-700">
+          <ul className="w-full flex flex-col gap-2 text-left text-sm text-gray-700 dark:text-textWhite2/90 ">
             {details.map((item, index) => (
-              <li key={index} className="flex items-start gap-2">
+              <li key={index} className="flex items-center gap-2">
                 <svg
                   className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5"
                   fill="none"
@@ -278,7 +279,9 @@ const InvestmentCard = ({
       </div>
 
       <div className="p-6 pt-0">
-        <Button className="w-full rounded-md bg-green hover:bg-green-600 text-white font-semibold py-2.5">
+        <Button onClick={()=>{
+          toast(`Clicked ${title}`)
+        }} className="w-full bg-brand hover:bg-green-600 dark:bg-brand dark:hover:bg-green-600 text-white dark:text-white font-semibold rounded-[6px] py-5">
           Invest Now
         </Button>
       </div>

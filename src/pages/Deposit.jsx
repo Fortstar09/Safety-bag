@@ -70,33 +70,33 @@ const Deposit = () => {
 
   return (
     <DashboardLayout>
-      <div className="bg-white w-full py-10 px-5 md:px-7">
-        <h1 className="text-2xl font-bold mb-6">Deposit</h1>
-        <div className="bg-white w-full py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="bg-white dark:bg-bgDark2 w-full min-h-full  py-10 px-5 md:px-7">
+        <h1 className="text-2xl font-bold mb-6 dark:text-textWhite1">Deposit</h1>
+        <div className="bg-white dark:bg-bgDark2 w-full py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <CustomCard title="Deposit with crypto" img="/icons/bank-fill.svg">
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
               Limit:{" "}
-              <span className="font-medium text-gray-800">
+              <span className="font-medium text-gray-800 dark:text-slate-200/80">
                 12 - 12,000 USDT
               </span>
             </p>
-            <p className="text-gray-600 mt-1 text-lg">
+            <p className="text-gray-600 dark:text-textWhite2/70 mt-dark:bg-bgDark21 text-lg">
               Balance:{" "}
               <span className="font-semibold">{balance.toFixed(2)} USDT</span>
             </p>
             <button
               onClick={handleDeposit}
-              className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
             >
               Deposit
             </button>
           </CustomCard>
           <CustomCard title="Paypal" img="/icons/paypal.svg">
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
               Limit:{" "}
-              <span className="font-medium text-gray-800">50 - 5,000 USDT</span>
+              <span className="font-medium text-gray-800 dark:text-slate-200/80">50 - 5,000 USDT</span>
             </p>
-            <p className="text-gray-600 mt-1 text-lg opacity-0">
+            <p className="text-gray-600 dark:text-textWhite2/70 mt-1 text-lg opacity-0">
               Balance:{" "}
               <span className="font-semibold">{balance.toFixed(2)} USDT</span>
             </p>
@@ -104,17 +104,17 @@ const Deposit = () => {
                    onClick={()=> {
                   toast.error("Service unavailable right now, kindly try Deposit with crypto")
                 }}
-              className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
             >
               Deposit
             </button>
           </CustomCard>
           <CustomCard title="Pay with Card" img="/icons/solarCard.svg">
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
               Limit:{" "}
-              <span className="font-medium text-gray-800">5 - 10,000 USDT</span>
+              <span className="font-medium text-gray-800 dark:text-slate-200/80">5 - 10,000 USDT</span>
             </p>
-            <p className="text-gray-600 mt-1 text-lg opacity-0">
+            <p className="text-gray-600 dark:text-textWhite2/70 mt-1 text-lg opacity-0">
               Balance:{" "}
               <span className="font-semibold">{balance.toFixed(2)} USDT</span>
             </p>
@@ -122,7 +122,7 @@ const Deposit = () => {
                    onClick={()=> {
                   toast.error("Service unavailable right now, kindly try Deposit with crypto")
                 }}
-              className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
             >
               Deposit
             </button>
@@ -131,13 +131,13 @@ const Deposit = () => {
             title="Online Bank Transfer"
             img="/icons/bankTransfer.svg"
           >
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 dark:text-textWhite2/70 text-sm">
               Limit:{" "}
-              <span className="font-medium text-gray-800">
+              <span className="font-medium text-gray-800 dark:text-slate-200/80">
                 10 - 20,000 USDT
               </span>
             </p>
-            <p className="text-gray-600 mt-1 text-lg opacity-0">
+            <p className="text-gray-600 dark:text-textWhite2/70 mt-1 text-lg opacity-0">
               Balance:{" "}
               <span className="font-semibold">{balance.toFixed(2)} USDT</span>
             </p>
@@ -145,7 +145,7 @@ const Deposit = () => {
                 onClick={()=> {
                   toast.error("Service unavailable right now, kindly try Deposit with crypto")
                 }}
-              className="text-white mt-4 bg-green py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-green/70 font-semibold"
+              className="text-white mt-4 bg-brand py-2 w-full px-3 inline-flex justify-center items-center rounded-[6px] hover:bg-brand/70 font-semibold"
             >
               Deposit
             </button>
@@ -180,7 +180,7 @@ const Deposit = () => {
                     <div
                       key={s}
                       className={`h-2 w-1/5 ${
-                        s <= step ? "bg-green" : "bg-gray-200"
+                        s <= step ? "bg-brand" : "bg-gray-200"
                       }`}
                     ></div>
                   ))}
@@ -200,11 +200,11 @@ const Deposit = () => {
                       onChange={(e) => setAmount(e.target.value)}
                       placeholder="Enter amount"
                       required
-                      className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green"
+                      className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
                     />
                     <button
                       type="submit"
-                      className="bg-green text-white py-2 rounded hover:bg-green/80"
+                      className="bg-brand text-white py-2 rounded hover:bg-brand/80"
                     >
                       Submit
                     </button>
@@ -213,8 +213,8 @@ const Deposit = () => {
 
                 {step === 2 && loading && (
                   <div className="flex flex-col items-center justify-center py-10">
-                    <div className="w-10 h-10 border-4 border-green border-t-transparent rounded-full animate-spin mb-4"></div>
-                    <p className="text-gray-600">
+                    <div className="w-10 h-10 border-4 border-brand border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <p className="text-gray-600 dark:text-textWhite2/70">
                       Generating deposit address...
                     </p>
                   </div>
@@ -234,7 +234,7 @@ const Deposit = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-5 h-5 text-gray-600 cursor-pointer hover:text-green"
+                        className="w-5 h-5 text-gray-600 dark:text-textWhite2/70 cursor-pointer hover:text-brand"
                       >
                         <path
                           strokeLinecap="round"
@@ -243,14 +243,14 @@ const Deposit = () => {
                         />
                       </svg>
                     </div>
-                    <p className="text-xs text-green">
+                    <p className="text-xs text-brand">
                       {copied ? "Copied!" : "Click icon to copy"} or Scan Qr
                       Code below
                     </p>
                     <img src="/images/qr-code.png" alt="qrcode" />
                     <button
                       onClick={handleConfirmDeposit}
-                      className="bg-green text-white py-2 w-full rounded hover:bg-green/80"
+                      className="bg-brand text-white py-2 w-full rounded hover:bg-brand/80"
                     >
                       I have sent the crypto
                     </button>
@@ -259,8 +259,8 @@ const Deposit = () => {
 
                 {step === 4 && (
                   <div className="flex flex-col items-center justify-center py-10">
-                    <div className="w-10 h-10 border-4 border-green border-t-transparent rounded-full animate-spin mb-4"></div>
-                    <p className="text-gray-600">Verifying deposit...</p>
+                    <div className="w-10 h-10 border-4 border-brand border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <p className="text-gray-600 dark:text-textWhite2/70">Verifying deposit...</p>
                   </div>
                 )}
 
@@ -270,11 +270,11 @@ const Deposit = () => {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.3 }}
-                      className="w-12 h-12 bg-green rounded-full flex items-center justify-center text-white text-2xl mb-3"
+                      className="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white text-2xl mb-3"
                     >
                       ✓
                     </motion.div>
-                    <p className="text-green font-semibold">
+                    <p className="text-brand font-semibold">
                       Deposit Confirmed!
                     </p>
                     <p className="text-gray-500 text-sm mt-1">

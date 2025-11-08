@@ -13,7 +13,7 @@ import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-bgDark2">
       <Navbar />
       <Hero />
       <GiftCards />
